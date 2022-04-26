@@ -1,16 +1,21 @@
 <footer id="footer">
   <div>
-    <span>© {{ .Site.Params.since }}</span> - <span>{{ now.Format "2006"}}</span>
+    <a class="link" id="dark-mode-toggle" onclick="toggleTheme()" href="">Toggle Dark Mode</a>
   </div>
-
+  <script src="{{ .Site.BaseURL }}js/themetoggle.js"></script>
   <div>
-    <span>Powered by </span>
-    <a class="link" href="https://gohugo.io/">Hugo</a>
-    <span> 🍦 Theme </span>
-    <a class="link" href="https://github.com/queensferryme/hugo-theme-texify">TeXify</a>
+    <span>© {{ .Site.Params.since }}</span> - <span>{{ now.Format "2006"}} {{.Site.Author.name}}</span>
   </div>
 
   <div class="footnote">
     <span>{{ .Site.Params.footnote | safeHTML }}</span>
+  </div>
+
+  <div>
+    <span>Powered by
+    <a class="link" href="https://gohugo.io/">Hugo</a>
+    and the
+    <a class="link" href="https://github.com/queensferryme/hugo-theme-texify">TeXify</a>
+    theme. </span>
   </div>
 </footer>
